@@ -22,30 +22,90 @@
     ></script>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://img.freepik.com/premium-vector/logo-men-s-clothing-store-that-says-men-s-clothing-store_1275330-524.jpg?semt=ais_hybrid&w=740&q=80"
+            alt="Bootstrap"
+            height="80"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Sản phẩm
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Áo thun</a></li>
+                <li><a class="dropdown-item" href="#">Áo Polo</a></li>
+                <li><a class="dropdown-item" href="#">Áo Sơmi</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Các mặt hàng khác</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Hàng bán chạy</a>
+            </li>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Phụ kiện
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Đồng hồ</a></li>
+                <li><a class="dropdown-item" href="#">Ví da</a></li>
+                <li><a class="dropdown-item" href="#">Mát kính</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Các mặt hàng khác</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search" style="flex-direction: right">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
   </body>
 </html>
