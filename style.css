@@ -1,82 +1,141 @@
-/* 1. Thiết lập chung */
+/* Tổng thể */
+
+* {
+    box-sizing: border-box;
+}
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
+    font-family: 'Inter', sans-serif;
+    background-color: #fdfdfd;
 }
 
-/* 2. Tùy chỉnh Navbar */
+/* 1. HIỆU ỨNG NAVBAR */
 .navbar {
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Tạo bóng đổ nhẹ cho sang trọng */
-    padding: 10px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     transition: all 0.3s ease;
+    background-color: rgb(210, 213, 233);
+    padding: 0px;
 }
 
-.navbar-brand img {
-    transition: transform 0.3s ease;
-}
-
-.navbar-brand img:hover {
-    transform: scale(1.05); /* Logo phóng to nhẹ khi di chuột */
-}
-
-/* Căn chỉnh các link menu */
+/* Hiệu ứng gạch chân cho link khi hover */
 .nav-link {
+    color: #333 !important;
     font-weight: 500;
-    color: #444 !important;
-    margin: 0 5px;
+    margin: 0 10px;
     position: relative;
+    transition: color 0.3s ease;
 }
 
-/* Hiệu ứng gạch chân khi hover cho Nav-link */
 .nav-link::after {
     content: '';
     position: absolute;
     width: 0;
     height: 2px;
-    bottom: 5px;
-    left: 10%;
-    background-color: #198754; /* Màu xanh success của Bootstrap */
+    bottom: 0;
+    left: 0;
+    background-color: #198754; /* Màu xanh lá đặc trưng */
     transition: width 0.3s ease;
 }
 
 .nav-link:hover::after {
-    width: 80%;
+    width: 100%;
 }
 
-/* 3. Tùy chỉnh Dropdown */
+.nav-link:hover {
+    color: #198754 !important;
+}
+
+/* 2. HIỆU ỨNG DROPDOWN */
 .dropdown-menu {
     border: none;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    animation: fadeIn 0.3s ease; /* Hiệu ứng hiện hình mượt mà */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    margin-top: 10px;
+    display: block; /* Thiết lập để chuẩn bị cho hiệu ứng ẩn hiện */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+/* Tự động mở dropdown khi hover (Thay vì click) */
+.nav-item.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    transition: all 0.2s ease;
+}
+
+.navbar .nav-link {
+    padding: 30px;
+    font-size: 20px;
+}
+
+.navbar li:hover {
+    background-color: #e0e8e9;
+    
 }
 
 .dropdown-item:hover {
+    background-color: #e8f5e9;
+    color: #198754;
+    padding-left: 25px; /* Hiệu ứng đẩy nhẹ chữ sang phải khi hover */
+}
+
+/* 3. Ô TÌM KIẾM & NÚT BẤM */
+.search-input {
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    box-shadow: 0 0 0 0.25 darkgreen;
+    border-color: #198754;
+    width: 250px; /* Ô search dài ra khi click vào */
+}
+
+.btn-search {
     background-color: #198754;
     color: white;
+    border-radius: 25px;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+    border: 2px solid #198754;
 }
 
-/* 4. Tùy chỉnh Ô Search */
-.form-control {
-    border-radius: 20px; /* Bo tròn ô nhập liệu */
-    padding-left: 20px;
+.btn-search:hover {
+    background-color: transparent;
+    color: #198754;
+    transform: translateY(-2px); /* Nút bay nhẹ lên */
+    box-shadow: 0 5px 15px rgba(25, 135, 84, 0.3);
 }
 
-.btn-outline-success {
-    border-radius: 20px;
-    border-width: 2px;
-    font-weight: 600;
+.list-group-item {
+    padding:  30px;
+    font-size: 20px;
+    font-weight: 500;
 }
 
-/* 5. Sticky Navbar (Giữ menu khi cuộn chuột) */
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+.list-group-item:hover {
+    background-color: #E0E8E9;
+    color: #468D54;
+}
+
+.col-4 {
+    padding: 10px;
+}
+
+.card .card-title a {
+    font-size: 25px;
+    color: #1863a8;
+    font-weight: bold;
+}
+
+.card .card-title a:hover {
+    color: #5F8754;
+    font-size: 30px;
 }
